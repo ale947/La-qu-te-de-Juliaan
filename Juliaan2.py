@@ -30,10 +30,10 @@ if st.button("Soumettre"):
         # Ajoutez ici le lien pour télécharger un fichier
         with open("Quête de Juliaan bis.ppsx", "rb") as f:
             st.download_button(
-                label="Télécharger le fichier",
+                label="Suite de la quête Divine",
                 data=f,
                 file_name="Quête de Juliaan bis.ppsx",
                 mime="application/vnd.openxmlformats-officedocument.presentationml.slideshow"
             )
     else:
-        st.error("Désolé, certaines réponses sont incorrectes. Essayez à nouveau.")
+        st.error("Certaines réponses sont incorrectes. Suivez la voix de Juliaan.")
