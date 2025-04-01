@@ -17,7 +17,7 @@ st.title("Epreuve de Jésus")
 
 # Ajouter l'audio en arrière-plan
 audio_file = "Epic Battle Music (No Copyright) Dragon Castle by @Makai-symphony.mp3"  # Remplacez ce chemin par le vôtre
-st.audio(audio_file, start_time=0, format="audio/mp3", autoplay=True, loop)
+st.audio(audio_file, start_time=0, format="audio/mp3", autoplay=True, loop=True)
 
 # Variables pour stocker les réponses des utilisateurs
 responses = []
