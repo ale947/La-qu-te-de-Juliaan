@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st 
 
 # Questions et réponses correctes
 questions = [
@@ -15,15 +15,9 @@ def check_answers(responses):
 # Interface Streamlit
 st.title("Epreuve de Jésus")
 
-# Ajout de la musique en arrière-plan
-audio_file = "Epic Battle Music (No Copyright) Dragon Castle by @Makai-symphony.mp3"  # Remplacez par le chemin de votre fichier audio
-audio_html = f"""
-    <audio autoplay loop>
-        <source src="{audio_file}" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-"""
-st.markdown(audio_html, unsafe_allow_html=True)  # Injecte l'HTML dans la page pour jouer la musique
+# Ajouter l'audio en arrière-plan
+audio_file = "chemin/vers/votre/audio.mp3"  # Remplacez ce chemin par le vôtre
+st.audio(audio_file, start_time=0, format="audio/mp3", autoplay=True)
 
 # Variables pour stocker les réponses des utilisateurs
 responses = []
