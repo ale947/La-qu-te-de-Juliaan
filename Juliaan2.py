@@ -1,0 +1,39 @@
+import streamlit as st
+
+# Questions et réponses correctes
+questions = [
+    {"question": "Par quel méthode barbare est morte Marie Madeleine ?", "correct_answer": "La lapidation"},
+    {"question": "Comment s'appelle la femelle du cochon ?", "correct_answer": "La truie"},
+    {"question": "Quel est le mot le plus long de la langue française ?", "correct_answer": "Intergouvernementalisations"},
+    {"question": "Comment appelle t'on les habitants de la commune de Y ?", "correct_answer": "Les ypsiloniens"}
+]
+
+# Fonction pour vérifier si les réponses sont correctes
+def check_answers(responses):
+    return all(responses[i].lower() == questions[i]["correct_answer"].lower() for i in range(len(questions)))
+
+# Interface Streamlit
+st.title("Quiz de 4 questions")
+
+# Variables pour stocker les réponses des utilisateurs
+responses = []
+
+# Pose les questions et récupère les réponses
+for i, q in enumerate(questions):
+    response = st.text_input(q["question"], key=i)
+    responses.append(response)
+
+# Vérifie les réponses après que l'utilisateur ait rempli toutes les questions
+if st.button("Soumettre"):
+    if check_answers(responses):
+        st.success("Félicitations, vous avez toutes les bonnes réponses !")
+        # Ajoutez ici le lien pour télécharger un fichier
+        with open("Quête de Juliaan bis.ppsx", "rb") as f:
+            st.download_button(
+                label="Télécharger le fichier",
+                data=f,
+                file_name="Quête de Juliaan bis.ppsx",
+                mime="application/vnd.openxmlformats-officedocument.presentationml.slideshow"
+            )
+    else:
+        st.error("Désolé, certaines réponses sont incorrectes. Essayez à nouveau.")
