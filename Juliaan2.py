@@ -13,7 +13,7 @@ def check_answers(responses):
     return all(responses[i].lower() == questions[i]["correct_answer"].lower() for i in range(len(questions)))
 
 # Interface Streamlit
-st.title("Quiz de 4 questions")
+st.title("Epreuve de Jésus")
 
 # Variables pour stocker les réponses des utilisateurs
 responses = []
