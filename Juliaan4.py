@@ -16,7 +16,7 @@ def check_answers(responses):
 st.title("Epreuve de Jésus")
 
 # Ajout de la musique
-audio_file = "votre_piste_audio.mp3"  # Remplacez par le chemin du fichier audio que vous choisirez
+audio_file = "Epic Battle Music (No Copyright) Dragon Castle by @Makai-symphony.mp3"  # Remplacez par le chemin du fichier audio que vous choisirez
 st.audio(audio_file, start_time=0, format="audio/mp3", loop=True)  # L'option loop=True fait que la musique tourne en boucle
 
 # Variables pour stocker les réponses des utilisateurs
