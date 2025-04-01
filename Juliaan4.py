@@ -16,7 +16,7 @@ def check_answers(responses):
 st.title("Epreuve de Jésus")
 
 # Ajouter l'audio en arrière-plan
-audio_file = "chemin/vers/votre/audio.mp3"  # Remplacez ce chemin par le vôtre
+audio_file = "Epic Battle Music (No Copyright) Dragon Castle by @Makai-symphony.mp3"  # Remplacez ce chemin par le vôtre
 st.audio(audio_file, start_time=0, format="audio/mp3", autoplay=True)
 
 # Variables pour stocker les réponses des utilisateurs
