@@ -1,4 +1,4 @@
-import streamlit as st 
+wimport streamlit as st 
 
 # Questions et réponses correctes
 questions = [
@@ -32,11 +32,11 @@ if st.button("Soumettre"):
     if check_answers(responses):
         st.success("Félicitations, vous avez toutes les bonnes réponses !")
         # Ajoutez ici le lien pour télécharger un fichier
-        with open("Quête de Juliaan bis.ppsx", "rb") as f:
+        with open("Quête de Juliaan bis new.ppsx", "rb") as f:
             st.download_button(
                 label="Suite de la quête Divine",
                 data=f,
-                file_name="Quête de Juliaan bis.ppsx",
+                file_name="Quête de Juliaan bis new.ppsx",
                 mime="application/vnd.openxmlformats-officedocument.presentationml.slideshow"
             )
     else:
