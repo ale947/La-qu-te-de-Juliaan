@@ -1,4 +1,4 @@
-wimport streamlit as st 
+import streamlit as st 
 
 # Questions et réponses correctes
 questions = [
